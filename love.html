@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>开心每一天-Lu❤</title>
+  <title>开心每一天❤</title>
 
   <script src="./js/jquery-1.11.0.min.js"></script>
   <link type="text/css" href="./css/style.css" rel="stylesheet" />
@@ -17,7 +17,6 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-      cursor: pointer;
     }
 
     .container {
@@ -274,20 +273,14 @@
 
       transform: translate(-50%, -50%);
     }
-
-    audio {
-      display: none
-    }
   </style>
 </head>
 
-<body onLoad="javascript:window.resizeTo(screen.availWidth,screen.availHeight);window.moveTo(0,0) ">
-  <!-- <audio autoplay="autopaly">
-    <source src="./ever.mp3" type="audio/mp3" loop="loop" />
-  </audio> -->
-  <audio src="./ever.mp3" id="aud" autoplay="autoplay" controls="controls" preload="auto" loop="loop"></audio>
-
-  <div id="jsi-cherry-container" class="container" onclick="musicPlay()">
+<body>
+  <audio autoplay="autopaly">
+    <source src="renxi.mp3" type="audio/mp3" loop="loop" />
+  </audio>
+  <div id="jsi-cherry-container" class="container">
     <!-- <div class="box">
       <ul class="minbox">
         <li></li>
@@ -351,25 +344,7 @@
       // 判断全屏状态的变量
       fullscreen = !fullscreen
     }
-    // changeFullScreen()
-    // setTimeout(() => {
-    //   changeFullScreen()
-    // }, 2000)
-    function musicPlay () {
-      var music = document.getElementById("aud");
-
-      if (music.paused) {
-        music.paused = false;
-        music.play();
-      } else {
-
-        music.paused = true;
-
-        music.pause()
-
-      }
-    }
-
+    changeFullScreen()
 
     var settings = {
       particles: {
@@ -618,9 +593,7 @@
     })(document.getElementById('pinkboard'));
 
 
-
-
-    // 花瓣 -----------------------------------------------
+    // 花瓣
     var RENDERER = {
       INIT_CHERRY_BLOSSOM_COUNT: 30,
       MAX_ADDING_INTERVAL: 10,
@@ -929,6 +902,7 @@
           this.x < this.renderer.width * 1.5
         );
       }
+
     };
     function onResize () {
       canvas.width = canvas.clientWidth;
