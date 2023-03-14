@@ -18,6 +18,7 @@
       padding: 0;
       overflow: hidden;
       cursor: pointer;
+      background: #000000;
     }
 
     .container {
@@ -274,7 +275,19 @@
 
       transform: translate(-50%, -50%);
     }
-
+.boxText {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -100%);
+      font-size: 40px;
+      color: pink;
+      font-style: italic;
+      text-shadow: 0 8px 10px #6699ff;
+      font-weight: bolder;
+      letter-spacing: 10px;
+      word-spacing: 24px;
+    }
     audio {
       display: none
     }
@@ -308,6 +321,7 @@
     </div> -->
     <!-- <div>快乐每一天</div> -->
     <div class="boxOne">
+      <div class="boxText">STT</div>
       <canvas id="pinkboard" style="width: 600px;height:500px">
         Canvas Not Support
       </canvas>
